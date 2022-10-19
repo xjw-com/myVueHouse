@@ -21,7 +21,7 @@ module.exports = {
       type: 'list',
       name: 'path',
       message: '请选择页面创建目录',
-      choices: getFolder('src/pages'),
+      choices: getFolder('src/views'),
     },
     {
       type: 'input',
@@ -37,12 +37,12 @@ module.exports = {
     },
   ],
   actions: (data) => {
-    let relativePath = path.relative('src/pages', data.path);
+    let relativePath = path.relative('src/views', data.path);
     const actions = [
       {
         type: 'add',
         path: `${data.path}/{{dotCase name}}.vue`,
-        templateFile: 'plop-tpls/page/index.hbs',
+        templateFile: 'plop-tpls/view/index.hbs',
         data: {
           componentName: `${relativePath} ${data.name}`,
         },
