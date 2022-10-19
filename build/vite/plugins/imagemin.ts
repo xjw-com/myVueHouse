@@ -1,3 +1,7 @@
+/**
+ * @name:viteImagemin
+ * @description 图片压缩
+ */
 import viteImagemin from 'vite-plugin-imagemin';
 
 export function ConfigImageminPlugin() {
