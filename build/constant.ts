@@ -12,13 +12,13 @@ export const VITE_PORT = 3000;
 // prefix
 export const API_PREFIX = '/api';
 
-// serve
+// local
 export const API_BASE_URL = '/api';
-export const API_TARGET_URL = 'http://localhost:1020';
+export const API_TARGET_URL = 'http://localhost:1706';
 
-// mock
-export const MOCK_API_BASE_URL = '/mock/api';
-export const MOCK_API_TARGET_URL = 'http://localhost:3000';
+//serve
+export const ONLINE_BASE_URL = '/online';
+export const ONLINE_TARGET_URL = 'http://10.9.1.6:1020';
 
 // iconfontUrl
 export const ICONFONTURL = '//at.alicdn.com/t/font_3004192_9jmc1z9neiw.js'; // 去色版
