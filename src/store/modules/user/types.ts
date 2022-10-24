@@ -18,4 +18,5 @@ export interface UserState {
   profileBio?: string;
   devLanguages?: string;
   role?: RoleType;
+  title?: string;
 }

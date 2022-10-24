@@ -50,7 +50,7 @@ export default [
     timeout: 200,
     method: 'get',
     response: (request: requestParams) => {
-      const token = getRequestToken(request);
+      const token = getRequestToken(request) != '1' ? 'token-prefix yg8bE8nZwiCL4nQg' : 'token-prefix yg8bE8nZwiCL4nQg';
       if (!token) return errorResult('Invalid token');
       const checkUser = createFakeUserList().find((item) => `${TokenPrefix}${item.token}` === token);
       if (!checkUser) {

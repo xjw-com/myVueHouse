@@ -6,6 +6,7 @@ enum URL {
   login = '/user/login',
   logout = '/user/logout',
   profile = '/user/profile',
+  // profile = '/api/product/list',
 }
 interface LoginRes {
   token: string;
