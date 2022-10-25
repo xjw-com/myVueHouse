@@ -17,17 +17,14 @@ export const API_TARGET_URL = 'http://localhost:8010';
 export const ONLINE_BASE_URL = '/online';
 export const ONLINE_TARGET_URL = 'http://10.9.1.88:8090';
 
-// iconfontUrl
-export const ICONFONTURL = '//at.alicdn.com/t/font_3004192_9jmc1z9neiw.js'; // 去色版
-
 // 包依赖分析
 export const ANALYSIS = true;
-
-// 是否支持Md渲染
-export const MARKDOWN = true;
 
 // 代码压缩
 export const COMPRESSION = true;
 
 // 删除 console
 export const VITE_DROP_CONSOLE = true;
+
+//去除debugger
+export const VITE_DROP_DEBUG = true;

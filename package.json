@@ -87,6 +87,9 @@
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue-tsc": "^0.40.4"
   },
+  "engines": {
+    "node": "18.10.0"
+  },
   "resolutions": {
     "bin-wrapper": "npm:bin-wrapper-china"
   },

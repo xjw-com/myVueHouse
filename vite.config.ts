@@ -2,7 +2,7 @@ import { UserConfig, ConfigEnv } from 'vite';
 import { createVitePlugins } from './build/vite';
 import { resolve } from 'path';
 import proxy from './build/vite/proxy';
-import { VITE_PORT } from './build/constant';
+import { VITE_PORT, VITE_DROP_CONSOLE, VITE_DROP_DEBUG } from './build/constant';
 
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir);
@@ -18,8 +18,9 @@ export default ({ command }: ConfigEnv): UserConfig => {
     base = '/';
   }
   return {
-    base,
+    base, //打包路径
     resolve: {
+      // 配置别名
       alias: [
         // /@/xxxx => src/xxxx
         {
@@ -48,6 +49,16 @@ export default ({ command }: ConfigEnv): UserConfig => {
       cors: false, // 类型： boolean | CorsOptions 为开发服务器配置 CORS。默认启用并允许任何源
       host: '0.0.0.0', // IP配置，支持从IP启动
       proxy,
+    },
+    // 生产环境打包配置
+    //去除 console debugger
+    build: {
+      terserOptions: {
+        compress: {
+          drop_console: VITE_DROP_CONSOLE,
+          drop_debugger: VITE_DROP_DEBUG,
+        },
+      },
     },
   };
 };
