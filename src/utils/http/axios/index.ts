@@ -12,6 +12,7 @@ axios.defaults.withCredentials = false;
 axios.defaults.headers.post['Access-Control-Allow-Origin-Type'] = '*';
 
 const axiosInstance: AxiosInstance = axios.create({
+  // 在生产环境中，环境变量会在构建时被静态替换，因此，在引用它们时请使用完全静态的字符串。动态的 key 将无法生效。例如，动态 key 取值 import.meta.env[key] 是无效的。
   // baseURL: import.meta.env.VITE_APP_API_BASE_URL,
   baseURL: import.meta.env.BASE_URL,
   // baseURL: 'http://localhost:8010',
